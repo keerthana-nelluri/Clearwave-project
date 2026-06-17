@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearwave - Simple, Transparent Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-green: #136A5E;
+            --brand-green-hover: #0F5249;
+            --badge-bg: #EAF6F4;
+            --dark-card-bg: #0C1A17;
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #f2f8f6;
+                color: #2b3a36;
+            }
+
+            .font-serif-italic {
+                font-family: 'Playfair Display', serif;
+                font-style: italic;
+                color: var(--brand-green);
+            }
+
+            .text-brand-green {
+                color: var(--brand-green) !important;
+            }
+
+            .bg-brand-badge {
+                background-color: var(--badge-bg) !important;
+                color: var(--brand-green);
+            }
+
+            .pricing-switch .form-check-input {
+                width: 3rem;
+                height: 1.6rem;
+                background-color: #cbdcd7;
+                border-color: transparent;
+                cursor: pointer;
+            }
+
+            .pricing-switch .form-check-input:checked {
+                background-color: var(--brand-green);
+                border-color: transparent;
+            }
+
+            .pricing-card {
+                background-color: #ffffff;
+                border-radius: 20px;
+                border: 1px solid rgba(19, 106, 94, 0.06);
+                box-shadow: 0 10px 30px rgba(19, 106, 94, 0.02);
+                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            }
+
+            .pricing-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 20px 40px rgba(19, 106, 94, 0.06);
+            }
+
+            .pricing-card.featured-card {
+                background-color: var(--dark-card-bg);
+                color: #ffffff;
+                border: 2px solid var(--brand-green);
+                position: relative;
+            }
+
+            .btn-outline-brand {
+                border: 1px solid #d1e2dd;
+                color: var(--brand-green);
+                font-weight: 500;
+                border-radius: 30px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn-outline-brand:hover {
+                background-color: var(--badge-bg);
+                border-color: var(--brand-green);
+                color: var(--brand-green);
+            }
+
+            .btn-solid-brand {
+                background-color: var(--brand-green);
+                color: #ffffff;
+                font-weight: 500;
+                border-radius: 30px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn-solid-brand:hover {
+                background-color: var(--brand-green-hover);
+                color: #ffffff;
+                box-shadow: 0 8px 20px rgba(19, 106, 94, 0.3);
+            }
+
+            .featured-tag {
+                position: absolute;
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: var(--brand-green);
+                color: #ffffff;
+                font-size: 0.65rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 4px 14px;
+                border-radius: 20px;
+                text-uppercase: uppercase;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5 my-5">
+        <div class="text-center mb-4">
+            <div class="badge bg-brand-badge rounded-pill px-3 py-1.5 text-uppercase fw-bold tracking-wider mb-3"
+                style="font-size: 0.65rem; letter-spacing: 1px;">
+                ✦ Pricing
+            </div>
+            <h2 class="display-5 fw-bold mb-3" style="color: #162521;">
+                Simple, <span class="font-serif-italic">transparent</span> pricing
+            </h2>
+            <p class="text-muted small" style="font-size: 0.95rem;">
+                No hidden fees. No surprise overages. Cancel anytime.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-3 pricing-switch mb-5 pb-3">
+            <span class="small fw-semibold text-secondary">Monthly</span>
+            <div class="form-check form-switch p-0 m-0 d-flex align-items-center">
+                <input class="form-check-input m-0" type="checkbox" id="billingToggle" checked>
+            </div>
+            <span class="small fw-semibold text-dark">Annual</span>
+            <span class="badge bg-brand-badge rounded-pill fw-bold" style="font-size: 0.65rem; padding: 4px 8px;">Save
+                20%</span>
+        </div>
+        <div class="row g-4 align-items-stretch justify-content-center">
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="pricing-card p-4 w-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <span class="text-uppercase text-muted fw-bold d-block mb-3"
+                            style="font-size: 0.65rem; letter-spacing: 1px;">Starter</span>
+                        <div class="d-flex align-items-baseline text-dark mb-3">
+                            <span class="h2 fw-bold mb-0">$</span>
+                            <span class="display-5 fw-bold mb-0">20</span>
+                            <span class="text-muted small ms-2">/ mo</span>
+                        </div>
+                        <p class="text-muted small mb-4 pb-2" style="line-height: 1.5;">
+                            For individuals and small teams getting started with structured workflows.
+                        </p>
+                        <hr class="opacity-10 mb-4">
+                        <ul class="list-unstyled d-grid gap-3 small text-secondary mb-5">
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Up to 5 team members
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> 10 active dashboards
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Basic automations
+                                (50/mo)</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> 7-day data history</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Email support</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2">
+                        <a href="#" class="btn btn-outline-brand w-100 py-2.5 small">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex mt-4 mt-md-0">
+                <div class="pricing-card featured-card p-4 w-100 d-flex flex-column justify-content-between">
+                    <div class="featured-tag">Most Popular</div>
+                    <div>
+                        <span class="text-uppercase text-white-50 fw-bold d-block mb-3"
+                            style="font-size: 0.65rem; letter-spacing: 1px;">Professional</span>
+                        <div class="d-flex align-items-baseline text-white mb-3">
+                            <span class="h2 fw-bold mb-0">$</span>
+                            <span class="display-5 fw-bold mb-0">60</span>
+                            <span class="text-white-50 small ms-2">/ mo</span>
+                        </div>
+                        <p class="text-white-50 small mb-4 pb-2" style="line-height: 1.5;">
+                            For growing teams that need powerful automation and advanced reporting.
+                        </p>
+                        <hr class="opacity-10 bg-white mb-4">
+                        <ul class="list-unstyled d-grid gap-3 small text-white-50 mb-5">
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Up to 25 team members
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Unlimited dashboards
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Advanced automations
+                                (unlimited)</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> 90-day data history</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Priority chat support
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Mobile app access</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2">
+                        <a href="#" class="btn btn-solid-brand w-100 py-2.5 small">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex mt-4 mt-lg-0">
+                <div class="pricing-card p-4 w-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <span class="text-uppercase text-muted fw-bold d-block mb-3"
+                            style="font-size: 0.65rem; letter-spacing: 1px;">Enterprise</span>
+                        <div class="d-flex align-items-baseline text-dark mb-3">
+                            <span class="h2 fw-bold mb-0">$</span>
+                            <span class="display-5 fw-bold mb-0">150</span>
+                            <span class="text-muted small ms-2">/ mo</span>
+                        </div>
+                        <p class="text-muted small mb-4 pb-2" style="line-height: 1.5;">
+                            For large organizations with custom requirements and compliance needs.
+                        </p>
+                        <hr class="opacity-10 mb-4">
+                        <ul class="list-unstyled d-grid gap-3 small text-secondary mb-5">
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Unlimited members</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Custom integrations &
+                                API</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> SSO & advanced
+                                permissions</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Unlimited data history
+                            </li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> Dedicated success
+                                manager</li>
+                            <li class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-brand-green small"></i> SOC 2 & compliance
+                                reports</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2">
+                        <a href="#" class="btn btn-outline-brand w-100 py-2.5 small">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
